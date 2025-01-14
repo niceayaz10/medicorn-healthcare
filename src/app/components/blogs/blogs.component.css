@@ -1,0 +1,39 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    color: #555;
+  }
+  
+  .form-control, .form-select {
+    border-radius: 20px;
+    padding: 10px;
+  }
+  
+  .row {
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 767px) {
+    .card {
+      margin-bottom: 20px;
+    }
+  }
+  

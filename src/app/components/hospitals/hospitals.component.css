@@ -1,0 +1,36 @@
+.card-hospital {
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hospital:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .header img {
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .carousel-inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .card-hospital {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-hospital {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

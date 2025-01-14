@@ -1,0 +1,67 @@
+.page-section {
+  background-color: #f9f9f9; /* Subtle background color */
+  padding: 40px 0;
+}
+
+.card-doctor {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0; /* Add border */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-doctor:hover {
+  transform: translateY(-10px); /* Hover effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-color: #e0e0e0; /* Highlight border on hover */
+}
+
+.card-doctor img {
+  max-height: 150px;
+  width: auto;
+  object-fit: cover;
+  transition: border-color 0.3s ease;
+}
+
+.card-doctor img:hover {
+  transition: scale(1.5); /* Highlight image border on hover */
+}
+
+.card-doctor h5 {
+  color: black;
+  font-weight: 600;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.15);
+  filter: none;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .card-doctor {
+    padding: 20px;
+  }
+
+  .card-doctor img {
+    max-height: 120px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-doctor {
+    margin-bottom: 20px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 12%;
+  }
+}

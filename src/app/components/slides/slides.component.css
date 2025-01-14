@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+    #medicalSlider img {
+      height: 40vh !important; /* Reduce height further for small screens */
+    }
+  }
+  

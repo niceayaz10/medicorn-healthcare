@@ -1,0 +1,60 @@
+<div class="page-section">
+  <div class="container">
+    <h1 class="text-center mb-5 text wow fadeInUp">Our Doctors</h1>
+    <div id="doctorCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div
+          class="carousel-item"
+          *ngFor="let chunk of chunkedDoctors; let i = index"
+          [class.active]="i === 0"
+        >
+          <div class="row g-4 d-flex justify-content-center">
+            <div *ngFor="let doctor of chunk" class="col-md-4 col-sm-6">
+              <div class="card-doctor mx-auto text-center p-3">
+                <div class="header">
+                  <img
+                    [src]="doctor.image"
+                    alt="Doctor Image"
+                    class="img-fluid rounded-circle mb-3"
+                  />
+                </div>
+                <div class="body">
+                  <h5>{{ doctor.name }}</h5>
+                  <p class="text-muted">{{ doctor.specialty }}</p>
+                  <a
+                    [href]="doctor.whatsappLink"
+                    target="_blank"
+                    class="btn btn-outline-success btn-sm"
+                    title="Contact on WhatsApp"
+                  >
+                    <i class="bi bi-whatsapp"></i> Chat
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#doctorCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#doctorCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>

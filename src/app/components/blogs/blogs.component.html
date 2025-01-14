@@ -1,0 +1,39 @@
+<div class="container my-5">
+    <h2 class="text-center">Latest Blogs</h2>
+  
+    <!-- Search Bar and Category Filter -->
+    <!-- <div class="row mb-4">
+      <div class="col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search blogs..."
+          [(ngModel)]="searchTerm"
+          (input)="filterBlogs()"
+        />
+      </div> -->
+  
+      <!-- <div class="col-md-6">
+        <select class="form-select" [(ngModel)]="selectedCategory" (change)="filterBlogs()">
+          <option value="">All Categories</option>
+          <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+        </select>
+      </div>
+    </div>
+  
+    <!-- Blog Cards -->
+    <div class="row">
+      <div *ngFor="let blog of filteredBlogs" class="col-md-4 mb-4">
+        <div class="card">
+          <img [src]="blog.imageUrl" class="card-img-top" alt="Blog image" />
+          <div class="card-body">
+            <h5 class="card-title">{{ blog.title }}</h5>
+            <p class="card-text">{{ blog.description | slice:0:150 }}...</p>
+            <p class="text-muted">By {{ blog.author }} on {{ blog.date }}</p>
+            <a [routerLink]="['/blog', blog.title]" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
